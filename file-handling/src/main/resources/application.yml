@@ -1,0 +1,25 @@
+
+server:
+  port: 8081
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+
+  swagger:
+    enabled: true
+  servlet:
+    multipart:
+      max-request-size: 1000MB
+      max-file-size: 100MB
+  mvc:
+    static-path-pattern: /fileData/**
+  resources:
+    static-locations: classpath:/static/
+logging:
+  level:
+    com.example.easyexcel.work.mapper: debug
